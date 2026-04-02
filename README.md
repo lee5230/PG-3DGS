@@ -1,13 +1,15 @@
-# Release
+# Physics-Guides 3D Gaussian Splatting Release Code
 
-This repository contains the code for our Physics-Guided 3D Gaussian Splatting optimization experiments with Eulerian fluid-based physics losses. It includes the code, experiment profiles, and datasets needed to run experiments for increasing the lift of a plane and making a pourable teapot.
+This repository contains the code for our Physics-Guided 3D Gaussian Splatting optimization experiments with Eulerian fluid-based physics losses. It includes the code, experiment profiles, and links to datasets needed to run experiments for increasing the lift of a plane and making a pourable teapot.
 
 Experiment profiles are in `experiment_profiles/`:
 - `experiment_profiles/experiment_profile_plane.json`
 - `experiment_profiles/experiment_profile_teapot.json`
 - `experiment_profiles/default_settings.json`
 
-The plane profile is intended for the 4 plane types in `data/`, i.e. airbus, b2, paper_plane, and cesna.
+Data is available at https://doi.org/10.17632/xz7tkg2zhd.1
+
+The plane profile is intended for the 4 plane types in `data/` from the above dataset, i.e. airbus, b2, paper_plane, and cesna.
 
 The teapot profile can be used with any of `data/teapot_00_ready` through `data/teapot_14_ready`. The example below uses `data/teapot_07_ready`.
 
@@ -22,8 +24,16 @@ pip install ./code/torch-splatting/submodules/simple-knn
 
 `simple_knn` is a compiled extension and needs its own `pip install` step.
 
+## Dataset
 
-Optional visualization dependencies such as `pyvista`, `plotly`, and `usd-core` are not required for training. If they are missing, the related optional outputs are skipped.
+The supporting dataset used in this project is available at Mendeley Data:
+
+**PG-3DGS Supporting Dataset: Multiview Teapot and Airplane Images, Depth Maps, Masks, and Camera Parameters**  
+DOI: https://doi.org/10.17632/xz7tkg2zhd.1
+
+This dataset contains 15 teapots and 4 airplanes, with RGB images, depth maps, masks, and camera parameters for 20 views per object.
+
+To use the data in the below example runs, download, decompress, and place the resulting `data` folder in the root of this repsitory.
 
 ## Example Runs
 
