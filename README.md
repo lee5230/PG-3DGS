@@ -1,5 +1,7 @@
 # Physics-Guided 3D Gaussian Splatting Official Implementation
 
+[![DOI](https://zenodo.org/badge/1199630587.svg)](https://doi.org/10.5281/zenodo.19392335)
+
 **Authors:** Zachary Lee, Maxwell Jacobson, Yexiang Xue
 
 This repository contains the implementation for our Physics-Guided 3D Gaussian Splatting optimization experiments with Eulerian fluid-based physics losses. It includes the code, experiment profiles, and links to datasets needed to run experiments for increasing the lift of a plane and making a pourable teapot.
