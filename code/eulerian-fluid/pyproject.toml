@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eulerian-fluid"         # any normalized name; not the import name
+version = "0.0.0"
+requires-python = ">=3.9"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["eulerian_fluid"]   # match top-level package
+exclude = [
+    "tests*", 
+    "docs*", 
+    "build*", 
+    "dist*", 
+    "*.egg-info*", 
+    "__pycache__*"
+]

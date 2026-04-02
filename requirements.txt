@@ -1,0 +1,16 @@
+accelerate
+einops
+imageio
+imageio-ffmpeg
+matplotlib
+numpy
+pillow
+pyopengl
+pyopengl-accelerate
+pyqt5
+scikit-image
+scipy
+tqdm
+trimesh
+vispy
+pyvista

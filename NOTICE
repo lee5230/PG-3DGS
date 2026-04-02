@@ -1,0 +1,13 @@
+# Licensing notice
+
+This repository contains code released under multiple licenses.
+
+- Root code excluding code/torch-splatting (© Zachary Lee, 2025) — MIT License (see LICENSE).
+- code/torch-splatting excluding code/torch-splatting/simple-knn — MIT License (© Binbin Huang, 2025).
+- code/torch-splatting/simple-knn — Gaussian-Splatting License © Inria & MPII.
+  This component is for research and evaluation use only, non-commercial use.
+  Any commercial use requires prior written consent from Inria.
+  Contact: stip-sophia.transfert@inria.fr
+
+Because this repository includes components under the Gaussian-Splatting License,
+the entire codebase **may only be used for non-commercial research purposes**.

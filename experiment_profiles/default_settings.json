@@ -1,0 +1,63 @@
+{
+  "total_steps": 1200,
+  "physics": {
+    "run_simulation": true,
+    "optimize_loss": true,
+    "loss_specs": [
+      {
+        "name": "weighted_density",
+        "weight": 0.5,
+        "args": {}
+      },
+      {
+        "name": "density_at_bottom",
+        "weight": 0.5,
+        "args": {}
+      }
+    ],
+    "loss_scaling": 0.2,
+    "loss_interval": 10,
+    "start_step": 10,
+    "taper_physics_loss": false,
+    "rotation_loss_scalings": [
+      {
+        "weight": 1.0,
+        "init_solid_pos": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "init_solid_q": [1.0, 0.0, 0.0, 0.0],
+        "init_solid_v": [0.0, 0.0, 0.0],
+        "init_solid_omega": [0.0, 0.0, 0.0]
+      }
+    ],
+    "disable_checkpoint": false,
+    "checkpoint_interval": 10,
+    "tile_size": 8,
+    "voxels_per_unit": 32.0,
+    "mask_sharpening": 4.5,
+    "do_visualize": true
+  },
+  "visual": {
+    "enabled": true,
+    "interval": 1
+  },
+  "blob_size_loss": {
+    "enabled": true,
+    "weight": 1000.0,
+    "loss_settings": {
+      "threshold": 0.02,
+      "margin": 0.01,
+      "p": 4,
+      "reduction": "sum"
+    }
+  },
+  "opacity_loss": {
+    "enabled": true,
+    "weight": 20.0,
+    "loss_settings": {
+      "reduction": "sum"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "total_steps": 20000,
+  "physics": {
+    "run_simulation": true,
+    "optimize_loss": true,
+
+    "move_object": false,
+    "com_blob_radius": 8.5,
+    "grid_shape": [84, 84, 130],
+    "voxels_per_unit": 64,
+    "num_steps": 50,
+    "num_pressure_iterations": 10,
+    "dt": 0.15,
+
+    "loss_specs": [
+      {
+        "name": "weighted_density",
+        "weight": 0.5,
+        "args": {}
+      }
+    ],
+    "loss_scaling": 0.4,
+    "loss_interval": 25,
+    "start_step": 2000,
+    "taper_physics_loss": false,
+    "rotation_loss_scalings": [
+      {
+        "weight": 1.0,
+        "init_solid_pos": [0.0, 0.0, 20.0],
+        "init_solid_q": [0.5190988868333698, 0.8547141894740934, 0.0, 0.0],
+        "init_solid_v": [0.0, 0.0, 0.0],
+        "init_solid_omega": [0.0, 0.0, 0.0]
+      },
+      {
+        "weight": -1.0,
+        "init_solid_pos": [0.0, 0.0, 20.0],
+        "init_solid_q": [0.9689124217106447, 0.24740395925452294, 0.0, 0.0],
+        "init_solid_v": [0.0, 0.0, 0.0],
+        "init_solid_omega": [0.0, 0.0, 0.0]
+      }
+    ],
+    "disable_checkpoint": false,
+    "checkpoint_interval": 10,
+    "tile_size": 8,
+    "mask_sharpening": 1.0,
+    "do_visualize": true
+  },
+  "visual": {
+    "enabled": true,
+    "interval": 1
+  },
+  "blob_size_loss": {
+    "enabled": false,
+    "weight": 1000.0,
+    "loss_settings": {
+      "threshold": 0.02,
+      "margin": 0.01,
+      "p": 4,
+      "reduction": "sum"
+    }
+  },
+  "opacity_loss": {
+    "enabled": false,
+    "weight": 1.0,
+    "loss_settings": {
+      "reduction": "sum"
+    }
+  },
+  "num_layers": 2
+}
